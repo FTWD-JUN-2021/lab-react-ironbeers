@@ -7,6 +7,7 @@ import { Route, Switch } from 'react-router-dom';
 import RandomBeer from './components/RandomBeer';
 import AllBeer from './components/AllBeer';
 import NewBeer from './components/NewBeer';
+import SingleBeer from './components/SingleBeer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/beers" render={(props) => <AllBeer/>}/>
         <Route exact path="/random-beer" render={(props) => <RandomBeer/>}/>
         <Route exact path="/new-beer" render={(props) => <NewBeer />}/>
+        <Route exact path="/one-beer/:id" render={(props) => <SingleBeer {...props}/>}/>
       </Switch>
     </div>
   );
