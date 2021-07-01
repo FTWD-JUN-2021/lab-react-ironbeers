@@ -14,11 +14,19 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path="/" render={(props) => <Home />}/>
-        <Route exact path="/beers" render={(props) => <AllBeer/>}/>
-        <Route exact path="/random-beer" render={(props) => <RandomBeer/>}/>
-        <Route exact path="/new-beer" render={(props) => <NewBeer />}/>
-        <Route exact path="/one-beer/:id" render={(props) => <SingleBeer {...props}/>}/>
+        <Route exact path="/" render={(props) => <Home />} />
+        <Route exact path="/beers" render={(props) => <AllBeer />} />
+        <Route
+          exact
+          path="/random-beer"
+          render={(props) => <RandomBeer {...props} />}
+        />
+        <Route exact path="/new-beer" render={(props) => <NewBeer />} />
+        <Route
+          exact
+          path="/one-beer/:id"
+          render={(props) => <SingleBeer {...props} />}
+        />
       </Switch>
     </div>
   );
