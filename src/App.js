@@ -8,6 +8,7 @@ import RandomBeer from './components/RandomBeer';
 import AllBeer from './components/AllBeer';
 import NewBeer from './components/NewBeer';
 import SingleBeer from './components/SingleBeer';
+import Cat from './components/Cat';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" render={(props) => <Home />} />
+        <Route exact path="/cat" render={(props) => <Cat />} />
+
         <Route exact path="/beers" render={(props) => <AllBeer />} />
         <Route
           exact
